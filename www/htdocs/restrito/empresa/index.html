@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../img/favicon.ico" type="image/x-icon">
+    <title>Lida Carreiras - FEED</title>
+    <link rel="stylesheet" href="../../frameworks/bootstrap/5.2.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../frameworks/fontawesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="../../frameworks/boxicons/2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../frameworks/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="stylesheet" href="../../css/empresa.css">
+</head>
+
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav_menu">
+            <div>
+                <a href="" class="nav_logo">
+                    <i class="fas fa-briefcase color_icon"></i>
+                    <span class="nav_logo-name">LidaCarreiras</span>
+                </a>
+                <div class="nav_list">
+                    <a href="../feed/" class="nav_link feed">
+                        <i class="fas fa-home"></i>
+                        <span class="nav_name">Feed</span>
+                    </a>
+                    <!--a href="../vagas-curtidas/" class="nav_link vagas-curtidas">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span class="nav_name">Vagas Curtidas</span>
+                    </a>
+                    <a href="../empresas-curtidas/" class="nav_link empresas-curtidas">
+                        <i class="fas fa-heart"></i>
+                        <span class="nav_name">Empresas Curtidas</span>
+                    </a-->
+                    <!--a href="../meus-favoritos/" class="nav_link">
+                        <i class="fas fa-star"></i>
+                        <span class="nav_name">Meus Favoritos</span>
+                    </a>
+                    <a href="../minhas-mensagens/" class="nav_link">
+                        <i class="fas fa-comment"></i>
+                        <span class="nav_name">Minhas Mensagens</span>
+                    </a>
+                    <a href="../meus-processos/" class="nav_link">
+                        <i class="fas fa-file-signature"></i>
+                        <span class="nav_name">Meus Processos</span>
+                    </a-->
+                    <a href="../perfil/" class="nav_link perfil">
+                        <i class="fas fa-user"></i>
+                        <span class="nav_name">Perfil</span>
+                    </a>
+                    <a href="../empresa/" class="nav_link empresa active">
+                        <i class="fas fa-building"></i>
+                        <span class="nav_name">Empresa</span>
+                    </a>
+                    <!--a href="../ajustes/" class="nav_link">
+                        <i class="fas fa-cog"></i>
+                        <span class="nav_name">Ajustes</span>
+                    </a>
+                    <a href="../ajuda/" class="nav_link">
+                        <i class="fas fa-question"></i>
+                        <span class="nav_name">Ajuda</span>
+                    </a-->
+                </div>
+            </div>
+            <a href="#" class="nav_link" onclick="sair()">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav_name">Sair</span>
+            </a>
+        </nav>
+    </div>
+    <div class="height-100 container">
+        <ul class="nav nav-tabs mb-3">
+            <li class="nav-item">
+                <a class="nav-link nav-dados-cadastrais active">Dados Cadastrais</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-endereco">Endereço</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-vagas">Vagas</a>
+            </li>
+        </ul>
+        <div class="alert d-none" role="alert"></div>
+        <form class="d-none" id="editarEmpresa" autocomplete="off">
+            <div class="row g-2">
+                <div class="col-md-4 mb-1">
+                    <label class="form-label">CNPJ</label>
+                    <input type="text" class="form-control form-control-sm shadow-none" name="cnpj" disabled>
+                </div>
+                <div class="col-md-4 mb-1">
+                    <label class="form-label">Rasão Social</label>
+                    <input type="text" class="form-control form-control-sm shadow-none" name="rasaoSocial">
+                </div>
+                <div class="col-md-4 mb-1">
+                    <label class="form-label">Nome Faltasia</label>
+                    <input type="text" class="form-control form-control-sm shadow-none" name="nomeFantasia">
+                </div>
+                <div class="col-md-2 mb-1">
+                    <label class="form-label">Telefone</label>
+                    <input type="text" class="form-control form-control-sm shadow-none" name="telefone">
+                </div>
+                <div class="col-md-1 mb-1">
+                    <label class="form-label">Ramal</label>
+                    <input type="number" class="form-control form-control-sm shadow-none" name="ramal">
+                </div>
+                <div class="col-md-9 mb-1">
+                    <label class="form-label">E-mail</label>
+                    <input type="email" class="form-control form-control-sm shadow-none" name="email" disabled>
+                </div>
+                <div class="col-md-12 mb-1">
+                    <label class="form-label">Descrição da Empresa</label>
+                    <textarea class="form-control form-control-sm shadow-none" id="descricaoEmpresa" name="descricao"></textarea>
+                </div>
+                <div class="col-md-2 mb-1 d-flex align-items-center justify-content-center previa-logo"></div>
+                <div class="col-md-4 mb-1">
+                    <label class="form-label">Logo</label>
+                    <input type="file" class="form-control form-control-sm shadow-none" name="logo">
+                </div>
+                <div class="col-md-3 mb-1">
+                    <label class="form-label">Senha</label>
+                    <input type="password" class="form-control form-control-sm shadow-none" name="senha">
+                </div>
+                <div class="col-md-3 mb-1">
+                    <label class="form-label">Repita Senha</label>
+                    <input type="password" class="form-control form-control-sm shadow-none" name="repitaSenha">
+                </div>
+                <div class="d-grid gap-2 mb-3">
+                    <button class="btn btn-primary btn-sm shadow-none" type="submit"><i class="fas fa-save"></i> Salvar Informações Cadastrais</button>
+                </div>
+            </div>
+        </form>
+        <form class="d-none" id="editarEndereco" autocomplete="off">
+            <div class="row g-2">
+                <div class="col-md-6 mb-1">
+                    <label class="form-label">Logradouro</label>
+                    <input type="text" class="form-control form-control-sm shadow-none" name="logradouro">
+                </div>
+                <div class="col-md-1 mb-1">
+                    <label class="form-label">Número</label>
+                    <input type="number" class="form-control form-control-sm shadow-none" name="numero">
+                </div>
+                <div class="col-md-3 mb-1">
+                    <label class="form-label">Complemento</label>
+                    <input type="text" class="form-control form-control-sm shadow-none" name="complemento">
+                </div>
+                <div class="col-md-2 mb-1">
+                    <label class="form-label">Cep</label>
+                    <input type="text" class="form-control form-control-sm shadow-none" name="cep">
+                </div>
+                <div class="col-md-5 mb-1">
+                    <label class="form-label">Bairro</label>
+                    <input type="text" class="form-control form-control-sm shadow-none" name="bairro">
+                </div>
+                <div class="col-md-5 mb-1">
+                    <label class="form-label">Cidade</label>
+                    <input type="text" class="form-control form-control-sm shadow-none" name="cidade">
+                </div>
+                <div class="col-md-2 mb-1">
+                    <label class="form-label">Estado</label>
+                    <select class="form-select form-select-sm shadow-none" name="estado">
+                        <option value="">--Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceara</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <div class="col-md-2 d-grid gap-2 mb-3">
+                    <button class="btn btn-danger btn-sm shadow-none excluir-endereco" type="button"><i class="fas fa-trash-alt"></i> Excluir Endereço</button>
+                </div>
+                <div class="col-md-10 d-grid gap-2 mb-3">
+                    <button class="btn btn-primary btn-sm shadow-none" type="submit"><i class="fas fa-save"></i> Salvar Informações de Endereço</button>
+                </div>
+            </div>
+        </form>
+        <form class="d-none" id="cadastrarVagas" autocomplete="off">
+            <div class="row g-2">
+                <div class="col-md-12 mb-1">
+                    <label class="form-label">Título</label>
+                    <input type="text" class="form-control form-control-sm shadow-none" name="titulo">
+                </div>
+                <div class="col-md-12 mb-1">
+                    <label class="form-label">Descrição</label>
+                    <textarea class="form-control form-control-sm shadow-none" id="descricaoVaga" name="descricao"></textarea>
+                </div>
+                <div class="col-md-3 mb-1">
+                    <label class="form-label">Modalidade</label>
+                    <select class="form-select form-select-sm shadow-none" name="modalidade"></select>
+                </div>
+                <div class="col-md-3 mb-1">
+                    <label class="form-label">Modelo</label>
+                    <select class="form-select form-select-sm shadow-none" name="modelo"></select>
+                </div>
+                <div class="col-md-3 mb-1">
+                    <label class="form-label">Área</label>
+                    <select class="form-select form-select-sm shadow-none" name="area"></select>
+                </div>
+                <div class="col-md-3 mb-1">
+                    <label class="form-label">Data Limite</label>
+                    <input type="date" class="form-control form-control-sm shadow-none" name="dataLimite">
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn-sm shadow-none" type="submit"><i class="fas fa-save"></i> Salvar Certificado</button>
+                </div>
+            </div>
+            <hr>
+            <table class="table table-sm table-striped table-hover mb-3 d-none" id="tableConteudoVagas">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyConteudoVagas"></tbody>
+            </table>
+        </form>
+        <div class="modal" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-lg" id="modalConteudo"></div>
+        </div>
+    </div>
+</body>
+<script src="../../frameworks/bootstrap/5.2.2/js/bootstrap.min.js"></script>
+<script src="../../frameworks/fontawesome/5.8.2/js/all.min.js"></script>
+<script src="../../frameworks/jquery/3.6.1/jquery.min.js"></script>
+<script src="../../frameworks/cookie/3.0.1/cookie.min.js"></script>
+<script src="../../frameworks/mask/1.14.16/mask.min.js"></script>
+<script src="../../frameworks/select2/4.0.13/js/select2.full.min.js"></script>
+<script src="../../frameworks/ckeditor5/35.3.0/build/ckeditor.js"></script>
+<script src="../../js/menu.js"></script>
+<script src="../../js/empresa.js"></script>
+
+</html>

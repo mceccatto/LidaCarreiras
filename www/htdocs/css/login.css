@@ -1,0 +1,42 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-image: linear-gradient(to right bottom, #04005a, #0e0056, #140052, #19004f, #1c004b, #21014e, #260152, #2b0155, #350160, #3f016c, #4a0177, #550083);
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.criar-usuario,
+.recuperar-acesso,
+.voltar {
+    text-decoration: none;
+}
+
+.criar-usuario:hover,
+.recuperar-acesso:hover,
+.voltar:hover {
+    color: #b95be1 !important;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}

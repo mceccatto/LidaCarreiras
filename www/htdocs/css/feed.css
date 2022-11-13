@@ -1,0 +1,137 @@
+@media (min-width: 768px) {
+    #left {
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        width: 15%;
+    }
+
+    #middle {
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        left: 15%;
+        width: 70%;
+        overflow-y: scroll;
+    }
+
+    #right {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 15%;
+    }
+}
+
+#left {
+    height: 100%;
+    text-align: center;
+}
+
+
+#middle {
+    height: 100%;
+    text-align: center;
+}
+
+#right {
+    height: 100%;
+    text-align: center;
+}
+
+.conteudo::-webkit-scrollbar {
+    display: none;
+}
+
+.conteudo {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.img {
+    border-radius: 15px 15px 0 0;
+    border: 1px solid #ccc;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.95)), url("../img/feed.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.conteudo_text {
+    color: white;
+    margin: 10px;
+    text-shadow: 0 0 5px black;
+}
+
+.conteudo_vaga {
+    width: 100%;
+    background-color: white;
+    padding-bottom: 10px !important;
+}
+
+.conteudo_vaga_text {
+    text-align: justify;
+    padding: 15px;
+}
+
+.nopadding {
+    padding: 0 !important;
+}
+
+.btn-vaga {
+    width: 100px;
+    height: 80px;
+    border: none !important;
+}
+
+.btn-vaga:hover {
+    color: #2F006B;
+}
+
+.btn-vaga:active {
+    color: #1c004b !important;
+}
+
+.icons {
+    vertical-align: middle;
+    font-size: 30px;
+    color: #2F006B;
+}
+
+.filtro {
+    padding-top: 13px;
+}
+
+.filtroAvancado {
+    cursor: pointer;
+    color: var(--bg-lilas-claro);
+}
+
+.filtroAvancado:hover {
+    color: var(--bg-lilas-escuro);
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bg-lilas-claro);
+}
+
+.acoes-feed {
+    color: #c994eb;
+    cursor: pointer;
+}
+
+.acoes-feed:hover {
+    color: var(--bg-lilas-escuro);
+}
+
+.vagas-retornar,
+.vagas-avancar {
+    cursor: pointer;
+    color: var(--bg-lilas-claro);
+}
+
+.vagas-retornar:hover,
+.vagas-avancar:hover {
+    color: var(--bg-lilas-escuro);
+}

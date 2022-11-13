@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../img/favicon.ico" type="image/x-icon">
+    <title>Lida Carreiras - FEED</title>
+    <link rel="stylesheet" href="../../frameworks/bootstrap/5.2.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../frameworks/fontawesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="../../frameworks/boxicons/2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../frameworks/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="../../frameworks/chosen/1.8.7/chosen.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="stylesheet" href="../../css/feed.css">
+</head>
+
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+        <div class="text-center">
+            <div class="filtro position-absolute top-0 start-50 translate-middle-x">
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                    <input type="text" class="form-control shadow-none">
+                    <span class="input-group-text filtroAvancado" data-bs-toggle="modal" data-bs-target="#filtroModal"><i class="fas fa-filter"></i></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="modal modal-lg fade" id="filtroModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Busca avançada (APENAS DEMONSTRAÇÃO)</h5>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form action="">
+                            <div class="row my-4">
+                                <div class="col-sm-4">
+                                    <label for="tipoContrato" class="form-label">Tipo de contrato:</label>
+                                    <select type="text" class="form-select form-select-sm shadow-none" id="tipoContrato">
+                                        <option selected disabled>Selecione...</option>
+                                        <option value="1">Estágio</option>
+                                        <option value="2">Efetivo CLT</option>
+                                        <option value="3">PJ</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for=""></label>
+                                    <label for="hierLvl" class="form-label">Nivel hierarquico:</label>
+                                    <select type="text" class="form-select form-select-sm shadow-none" id="hierLvl">
+                                        <option selected disabled>Selecione...</option>
+                                        <option value="0">Aprendiz</option>
+                                        <option value="1">Estágio</option>
+                                        <option value="2">Trainee</option>
+                                        <option value="3">Junior</option>
+                                        <option value="4">Pleno</option>
+                                        <option value="5">Senior</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for=""></label>
+                                    <label for="area" class="form-label">Area de atuação:</label>
+                                    <select type="text" class="form-select form-select-sm shadow-none" id="area">
+                                        <option selected disabled>Selecione...</option>
+                                        <option value="1">TI</option>
+                                        <option value="2">Saúde</option>
+                                        <option value="3">Engenharia civil</option>
+                                        <option value="4">Administração</option>
+                                        <option value="5">RH</option>
+                                        <option value="6">Limpeza</option>
+                                        <option value="7">Segurança</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4 my-4">
+                                    <label for="dist" class="form-label">Distancia de até:</label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control shadow-none">
+                                        <span class="input-group-text">KM</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 my-4">
+                                    <label for="cidade" class="form-label">Cidade:</label>
+                                    <input type="text" class="form-control form-control-sm shadow-none">
+                                </div>
+                                <div class="col-sm-4 my-4">
+                                    <div class="form-check">
+                                        <input type="radio" name="remotoCheck" id="remoto" class="form-check-input shadow-none">
+                                        <label for="remoto" class="form-check-label">Trabalho remoto</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="remotoCheck" id="hibrido" class="form-check-input shadow-none">
+                                        <label for="hibrido" class="form-check-label">Trabalho hibrido</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="remotoCheck" id="presencial" class="form-check-input shadow-none">
+                                        <label for="presencial" class="form-check-label">Trabalho presencial</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="chave" class="form-label">Palavras-chave:</label>
+                                    <select id="chave" class="form-select form-select-sm shadow-none" style="width: 100%" multiple="multiple"></select>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm shadow-none"><i class="far fa-check-double"></i> Aplicar Filtro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav_menu">
+            <div>
+                <a href="" class="nav_logo">
+                    <i class="fas fa-briefcase color_icon"></i>
+                    <span class="nav_logo-name">LidaCarreiras</span>
+                </a>
+                <div class="nav_list">
+                    <a href="../feed/" class="nav_link feed active">
+                        <i class="fas fa-home"></i>
+                        <span class="nav_name">Feed</span>
+                    </a>
+                    <!--a href="../vagas-curtidas/" class="nav_link vagas-curtidas">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span class="nav_name">Vagas Curtidas</span>
+                    </a>
+                    <a href="../empresas-curtidas/" class="nav_link empresas-curtidas">
+                        <i class="fas fa-heart"></i>
+                        <span class="nav_name">Empresas Curtidas</span>
+                    </a-->
+                    <!--a href="../meus-favoritos/" class="nav_link">
+                        <i class="fas fa-star"></i>
+                        <span class="nav_name">Meus Favoritos</span>
+                    </a>
+                    <a href="../minhas-mensagens/" class="nav_link">
+                        <i class="fas fa-comment"></i>
+                        <span class="nav_name">Minhas Mensagens</span>
+                    </a>
+                    <a href="../meus-processos/" class="nav_link">
+                        <i class="fas fa-file-signature"></i>
+                        <span class="nav_name">Meus Processos</span>
+                    </a-->
+                    <a href="../perfil/" class="nav_link perfil">
+                        <i class="fas fa-user"></i>
+                        <span class="nav_name">Perfil</span>
+                    </a>
+                    <a href="../empresa/" class="nav_link empresa">
+                        <i class="fas fa-building"></i>
+                        <span class="nav_name">Empresa</span>
+                    </a>
+                    <!--a href="../ajustes/" class="nav_link">
+                        <i class="fas fa-cog"></i>
+                        <span class="nav_name">Ajustes</span>
+                    </a>
+                    <a href="../ajuda/" class="nav_link">
+                        <i class="fas fa-question"></i>
+                        <span class="nav_name">Ajuda</span>
+                    </a-->
+                </div>
+            </div>
+            <a href="#" class="nav_link" onclick="sair()">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav_name">Sair</span>
+            </a>
+        </nav>
+    </div>
+    <div class="height-100 container">
+        <div class="row">
+            <div class="col-sm-4 d-flex align-items-center justify-content-center" id="left">
+                <i class="far fa-chevron-left fa-6x vagas-retornar"></i>
+            </div>
+            <div class="col-sm-4 conteudo img nopadding" id="middle"></div>
+            <div class="col-sm-4 d-flex align-items-center justify-content-center" id="right">
+                <i class="far fa-chevron-right fa-6x vagas-avancar"></i>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../frameworks/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script>
+<script src="../../frameworks/fontawesome/5.8.2/js/all.min.js"></script>
+<script src="../../frameworks/jquery/3.6.1/jquery.min.js"></script>
+<script src="../../frameworks/cookie/3.0.1/cookie.min.js"></script>
+<script src="../../frameworks/mask/1.14.16/mask.min.js"></script>
+<script src="../../frameworks/chosen/1.8.7/chosen.jquery.min.js"></script>
+<script src="../../frameworks/select2/4.0.13/js/select2.full.min.js"></script>
+<script src="../../js/menu.js"></script>
+<script src="../../js/feed.js"></script>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Lida Carreiras - LOGIN</title>
+    <link rel="stylesheet" href="frameworks/bootstrap/5.2.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="frameworks/fontawesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="frameworks/chosen/1.8.7/chosen.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="text-center">
+    <main class="form-signin w-100 m-auto">
+        <form id="formEntrar" autocomplete="off">
+            <i class="fas fa-briefcase fa-4x text-light mb-1"></i>
+            <h1 class="h3 fw-normal text-light mb-4">Lida Carreiras</h1>
+            <div class="alert alert-entrar d-none" role="alert"></div>
+            <div class="input-group flex-nowrap mb-3">
+                <label class="input-group-text" style="padding: 0rem 15px;"><i class="fas fa-id-badge"></i></label>
+                <select class="form-select shadow-none" name="perfilEntrar">
+                    <option value="">Perfil</option>
+                    <option value="C">Candidato</option>
+                    <option value="E">Empresa</option>
+                </select>
+            </div>
+            <div class="input-group flex-nowrap mb-3">
+                <span class="input-group-text" id="addon-wrapping"><i class="fas fa-envelope"></i></span>
+                <input type="email" class="form-control shadow-none" name="email" placeholder="E-mail" aria-label="E-mail" aria-describedby="addon-wrapping">
+            </div>
+            <div class="input-group flex-nowrap mb-3">
+                <span class="input-group-text" id="addon-wrapping"><i class="fas fa-key"></i></span>
+                <input type="password" class="form-control shadow-none" name="senha" placeholder="Senha" aria-label="Senha" aria-describedby="addon-wrapping">
+            </div>
+            <button class="w-100 btn btn-md btn-primary" type="submit"><i class="fas fa-sign-in-alt"></i>Entrar</button>
+            <p class="mt-3 mb-3"><a class="text-light criar-usuario">Criar um usuário</a><br /><a class="text-light recuperar-acesso">Recuperar acesso</a></p>
+            <p class="mt-5 mb-3 text-light">LC - <script>document.write(new Date().getFullYear())</script></p>
+        </form>
+        <div class="d-none" id="formRegistrar">
+            <i class="fas fa-briefcase fa-4x text-light mb-1"></i>
+            <h1 class="h3 fw-normal text-light mb-4">Lida Carreiras</h1>
+            <div class="alert alert-registrar d-none" role="alert"></div>
+            <p class="text-light">CRIAR CONTA</p>
+            <div class="input-group flex-nowrap mb-3">
+                <label class="input-group-text" style="padding: 0rem 15px;"><i class="fas fa-id-badge"></i></label>
+                <select class="form-select shadow-none" name="perfil">
+                    <option value="">Perfil</option>
+                    <option value="C">Candidato</option>
+                    <option value="E">Empresa</option>
+                </select>
+            </div>
+            <div class="candidato d-none">
+                <form id="formRegistrarCandidato" autocomplete="off">
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 14px;" id="addon-wrapping"><i class="fas fa-user"></i></span>
+                        <input type="text" class="form-control shadow-none" name="nome" placeholder="Nome Completo" aria-label="Nome Completo" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 14px;" id="addon-wrapping"><i class="fas fa-user"></i></span>
+                        <input type="text" class="form-control shadow-none" name="nomeSocial" placeholder="Nome Social" aria-label="Nome Social" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <label class="input-group-text" style="padding: 0rem 12px;"><i class="fas fa-venus-mars"></i></label>
+                        <select class="form-select shadow-none" name="genero">
+                            <option value="">Gênero</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                            <option value="N/I">Não Informado</option>
+                        </select>
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 14px;" id="addon-wrapping"><i class="fas fa-calendar-alt"></i></span>
+                        <input type="text" class="form-control shadow-none" name="dataNascimento" onfocus="(this.type = 'date')" placeholder="Data de Nascimento" aria-label="Data de Nascimento" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 13px;" id="addon-wrapping"><i class="fas fa-phone"></i></span>
+                        <input type="text" class="form-control shadow-none" name="telefone" placeholder="Telefone" aria-label="Telefone" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 13px;" id="addon-wrapping"><i class="fas fa-envelope"></i></span>
+                        <input type="email" class="form-control shadow-none" name="email" placeholder="E-mail" aria-label="E-mail" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 13px;" id="addon-wrapping"><i class="fas fa-key"></i></span>
+                        <input type="password" class="form-control shadow-none" name="senha" placeholder="Senha" aria-label="Senha" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 13px;" id="addon-wrapping"><i class="fas fa-key"></i></span>
+                        <input type="password" class="form-control shadow-none" name="repitaSenha" placeholder="Repita Senha" aria-label="Repita Senha" aria-describedby="addon-wrapping">
+                    </div>
+                    <button class="w-100 btn btn-md btn-primary shadow-none" type="submit"><i class="fas fa-save"></i>Registrar</button>
+                </form>
+            </div>
+            <div class="empresa d-none">
+                <form id="formRegistrarEmpresa" autocomplete="off">
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 14px;" id="addon-wrapping"><i class="fas fa-building"></i></span>
+                        <input type="text" class="form-control shadow-none" name="cnpj" placeholder="CNPJ" aria-label="CNPJ" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 13px;" id="addon-wrapping"><i class="fas fa-tag"></i></span>
+                        <input type="text" class="form-control shadow-none" name="rasaoSocial" placeholder="Rasão Social" aria-label="Rasão Social" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 11px;" id="addon-wrapping"><i class="fas fa-signature"></i></span>
+                        <input type="text" class="form-control shadow-none" name="nomeFantasia" placeholder="Nome Fantasia" aria-label="Nome Fantasia" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 13px;" id="addon-wrapping"><i class="fas fa-phone"></i></span>
+                        <input type="text" class="form-control shadow-none" name="telefone" placeholder="Telefone" aria-label="Telefone" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 13px;" id="addon-wrapping"><i class="fas fa-phone-plus"></i></span>
+                        <input type="number" class="form-control shadow-none" name="ramal" placeholder="Ramal" aria-label="Ramal" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 13px;" id="addon-wrapping"><i class="fas fa-envelope"></i></span>
+                        <input type="email" class="form-control shadow-none" name="email" placeholder="E-mail" aria-label="E-mail" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 13px;" id="addon-wrapping"><i class="fas fa-key"></i></span>
+                        <input type="password" class="form-control shadow-none" name="senha" placeholder="Senha" aria-label="Senha" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" style="padding: 0rem 13px;" id="addon-wrapping"><i class="fas fa-key"></i></span>
+                        <input type="password" class="form-control shadow-none" name="repitaSenha" placeholder="Repita Senha" aria-label="Repita Senha" aria-describedby="addon-wrapping">
+                    </div>
+                    <button class="w-100 btn btn-md btn-primary shadow-none" type="submit"><i class="fas fa-save"></i>Registrar</button>
+                </form>
+            </div>
+            <p class="mt-3 mb-3"><a class="text-light voltar"><i class="fas fa-arrow-left"></i> Voltar</a></p>
+            <p class="mt-5 mb-3 text-light">LC - <script>document.write(new Date().getFullYear())</script></p>
+        </div>
+        <form class="d-none" id="formRecuperar" autocomplete="off">
+            <i class="fas fa-briefcase fa-4x text-light mb-1"></i>
+            <h1 class="h3 fw-normal text-light mb-4">Lida Carreiras</h1>
+            <div class="alert alert-recuperar d-none" role="alert"></div>
+            <p class="text-light">RECUPERAR ACESSO</p>
+            <div class="input-group flex-nowrap mb-3">
+                <span class="input-group-text" id="addon-wrapping"><i class="fas fa-envelope"></i></span>
+                <input type="email" class="form-control shadow-none" name="email" placeholder="E-mail" aria-label="E-mail" aria-describedby="addon-wrapping">
+            </div>
+            <button class="w-100 btn btn-md btn-primary shadow-none acessar" type="submit"><i class="fas fa-paper-plane"></i> Enviar Nova Senha</button>
+            <p class="mt-3 mb-3"><a class="text-light voltar"><i class="fas fa-arrow-left"></i> Voltar</a></p>
+            <p class="mt-5 mb-3 text-light">LC - <script>document.write(new Date().getFullYear())</script></p>
+        </form>
+    </main>
+</body>
+<script src="frameworks/bootstrap/5.2.2/js/bootstrap.min.js"></script>
+<script src="frameworks/fontawesome/5.8.2/js/all.min.js"></script>
+<script src="frameworks/jquery/3.6.1/jquery.min.js"></script>
+<script src="frameworks/cookie/3.0.1/cookie.min.js"></script>
+<script src="frameworks/mask/1.14.16/mask.min.js"></script>
+<script src="frameworks/chosen/1.8.7/chosen.jquery.min.js"></script>
+<script src="js/login.js"></script>
+
+</html>
