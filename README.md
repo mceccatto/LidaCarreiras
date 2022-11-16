@@ -2,7 +2,7 @@
 
 Aplicação destinada a publicações de vagas de trabalho na qual os candidatos podem curtir as vagas para participar das seleções e seguir as empresas para receber notificações de novas vagas publicadas.
 
-Todas as opções de cadastros de informações do **Cantidato** e da **Empresa** estão disponíveis.
+Todas as opções de cadastros de informações do **Cantidato** e da **Empresa** estão disponíveis, incluindo a recuperação de senha.
 
 Atualmente apenas a ação de **Curtir Vaga** está disponível para o candidato.
 
@@ -19,13 +19,13 @@ Os dados são enviados diretamente para a API com poucos tratamentos de dados.
     - Acessar a pasta **WWW** e executar a aplicação **miniweb.exe**
     - Acessar o a aplicação pelo endereço **http:/localhost:8000**
 
-## Equipe Desenvolvimento de Software Visual (Prof. Jean)
+## Equipe Desenvolvimento de Software Visual (Prof. Jean) - Engenharia de Software 4º período
 
 - Lucas Eduardo Zandoná (RGM-25807439)
 - Marcelo Ceccatto (RGM-25834851)
 - Nathan Pechebovicz (RGM-26695723)
 
-## Equipe Viabilidade de Projetos (Prof. Evandro)
+## Equipe Viabilidade de Projetos (Prof. Evandro) - Engenharia de Software 4º período
 
 - Gustavo Henrique Martins (RGM-13444051)
 - Luan Barleze (RGM-26297787)
