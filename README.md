@@ -19,17 +19,10 @@ Os dados são enviados diretamente para a API com poucos tratamentos de dados.
     - Acessar a pasta **WWW** e executar a aplicação **miniweb.exe**
     - Acessar o a aplicação pelo endereço **http:/localhost:8000**
 
-## Equipe Desenvolvimento de Software Visual (Prof. Jean) - Engenharia de Software 4º período
+## Equipe Modelos de Processos de Software - Engenharia de Software 5º período
 
-- Lucas Eduardo Zandoná (RGM-25807439)
-- Marcelo Ceccatto (RGM-25834851)
-- Nathan Pechebovicz (RGM-26695723)
-
-## Equipe Viabilidade de Projetos (Prof. Evandro) - Engenharia de Software 4º período
-
-- Gustavo Henrique Martins (RGM-13444051)
-- Luan Barleze (RGM-26297787)
-- Lucas Eduardo Zandoná (RGM-25807439)
-- Marcelo Ceccatto (RGM-25834851)
-- Matheus de Carvalho Pereira Pinto (RGM-28077113)
-- Nathan Pechebovicz (RGM-26695723)
+- Gustavo Henrique Martins​
+- Luan Barleze
+- Marcelo Ceccatto
+- Matheus de Carvalho Pereira Pinto
+- Nathan Pechebovicz
