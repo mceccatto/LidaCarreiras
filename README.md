@@ -19,7 +19,7 @@ Os dados são enviados diretamente para a API com poucos tratamentos de dados.
     - Acessar a pasta **WWW** e executar a aplicação **miniweb.exe**
     - Acessar o a aplicação pelo endereço **http:/localhost:8000**
 
-## Equipe Modelos de Processos de Software - Engenharia de Software 5º período
+## Equipe Arquitetura de Software - Engenharia de Software 6º período
 
 - Gustavo Henrique Martins​
 - Luan Barleze
